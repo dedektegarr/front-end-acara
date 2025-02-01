@@ -16,7 +16,6 @@ const Register = () => {
     isPendingRegister,
     errors,
   } = useRegister();
-console.log(errors)
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-10 lg:gap-20">
       <div className="flex w-full lg:w-1/3 flex-col items-center justify-center gap-10">
