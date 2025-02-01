@@ -1,7 +1,7 @@
 import AuthLayout from "@/components/layouts/AuthLayout";
 import Register from "@/components/views/Register";
 
-const index = () => {
+const RegisterPage = () => {
   return (
     <AuthLayout title="Acara | Register">
       <Register />
@@ -9,4 +9,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default RegisterPage;
