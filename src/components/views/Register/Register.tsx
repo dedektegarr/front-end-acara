@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, Input } from "@heroui/react";
+import { Button, Card, CardBody, Input, Spinner } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -49,7 +49,11 @@ const Register = () => {
               </Link>
             </p>
           </div>
-          <form action="" className="flex flex-col w-full sm:w-80 gap-3" onSubmit={handleSubmit(handleRegister)}>
+          <form
+            action=""
+            className="flex flex-col w-full sm:w-80 gap-3"
+            onSubmit={handleSubmit(handleRegister)}
+          >
             <Controller
               name="fullName"
               control={control}
@@ -150,8 +154,13 @@ const Register = () => {
               size="lg"
               type="submit"
               className="bg-danger-500 text-white"
+              isDisabled={isPendingRegister}
             >
-              Register
+              {isPendingRegister ? (
+                <Spinner color="white" size="sm" />
+              ) : (
+                "Register"
+              )}
             </Button>
           </form>
         </CardBody>
